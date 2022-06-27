@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zone-1614.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="使用教材:《复变函数与积分变换》  -- 李红 , 1-3章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="复变函数">
+<meta property="og:url" content="https://zone-1614.github.io/2022/06/27/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="使用教材:《复变函数与积分变换》  -- 李红 , 1-3章">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624170100.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624172440.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624200256.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625081906.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625083301.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625084402.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625085332.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625144750.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625145502.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220626161544.png">
+<meta property="article:published_time" content="2022-06-27T01:23:44.000Z">
+<meta property="article:modified_time" content="2022-06-27T01:23:44.254Z">
+<meta property="article:author" content="zone-1614">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624170100.png">
+
+<link rel="canonical" href="https://zone-1614.github.io/2022/06/27/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>复变函数 | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://zone-1614.github.io/2022/06/27/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zone-1614">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          复变函数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-06-27 09:23:44" itemprop="dateCreated datePublished" datetime="2022-06-27T09:23:44+08:00">2022-06-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">复变函数</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">使用教材:《复变函数与积分变换》  -- 李红 , 1-3章</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>积分变换是指通过积分运算, 把一个函数变成另一个函数, 本书的积分变换指的是傅里叶变换和拉普拉斯变换. 复变函数又叫复分析, 是实变函数和微积分的推广和发展. </p>
+<h1 id="第一章-复数与复变函数"><a href="#第一章-复数与复变函数" class="headerlink" title="第一章 复数与复变函数"></a>第一章 复数与复变函数</h1><h2 id="1-1-复数"><a href="#1-1-复数" class="headerlink" title="1.1 复数"></a>1.1 复数</h2><h3 id="1-1-1-复数的基本概念"><a href="#1-1-1-复数的基本概念" class="headerlink" title="1.1.1 复数的基本概念"></a>1.1.1 复数的基本概念</h3><p><strong>复数</strong>: $z=x+iy, Re(z) = x, Im(z) = y$</p>
+<p><strong>纯虚数</strong>: $z=iy$</p>
+<p><strong>共轭复数</strong>: z的共轭: $\overline{z}=x-iy$</p>
+<h3 id="1-1-2-复数的四则运算"><a href="#1-1-2-复数的四则运算" class="headerlink" title="1.1.2 复数的四则运算"></a>1.1.2 复数的四则运算</h3><p>$z_1+z_2=(x_1+x_2) + i(y_1+y_2)$</p>
+<p>$z_1\cdot z_2=(x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1)$</p>
+<h3 id="1-1-3-复平面"><a href="#1-1-3-复平面" class="headerlink" title="1.1.3 复平面"></a>1.1.3 复平面</h3><h2 id="1-2-复数的三角表示"><a href="#1-2-复数的三角表示" class="headerlink" title="1.2 复数的三角表示"></a>1.2 复数的三角表示</h2><h3 id="1-2-1-复数的模与辐角"><a href="#1-2-1-复数的模与辐角" class="headerlink" title="1.2.1 复数的模与辐角"></a>1.2.1 复数的模与辐角</h3><p><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624170100.png" alt="复平面"><br>向量$\vec{Oz}$的长度叫做z的模, 记作$|z|$, $\theta$叫做辐角, 辐角有无限个, 可以随便加减$2\pi$, 用记号Arg z表示; 用 arg z 表示范围在$[-\pi, \pi]$之间的辐角, 叫做主辐角. </p>
+<h3 id="1-2-2-复数模的三角不等式"><a href="#1-2-2-复数模的三角不等式" class="headerlink" title="1.2.2 复数模的三角不等式"></a>1.2.2 复数模的三角不等式</h3><p><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624172440.png" alt=""></p>
+<script type="math/tex; mode=display">||z_1|-|z_2|| \leq |z_1-z_2| \leq |z_1|+|z_2|</script><script type="math/tex; mode=display">||z_1|-|z_2|| \leq |z_1+z_2| \leq |z_1|+|z_2|</script><h3 id="1-2-3-复数的三角表示"><a href="#1-2-3-复数的三角表示" class="headerlink" title="1.2.3 复数的三角表示"></a>1.2.3 复数的三角表示</h3><script type="math/tex; mode=display">z=r(cos\theta + i\  sin\theta)=re^{i\theta}</script><h3 id="1-2-4-复数三角表示的乘除法"><a href="#1-2-4-复数三角表示的乘除法" class="headerlink" title="1.2.4 复数三角表示的乘除法"></a>1.2.4 复数三角表示的乘除法</h3><script type="math/tex; mode=display">
+z_1 \cdot z_2 = r_1r_2((cos(\theta_1+\theta_2)+i\ sin(\theta_1 + \theta_2)))</script><blockquote>
+<p>例题1.5 用三角表示计算$(1 + \sqrt{3}i)(-\sqrt{3} - i)$ </p>
+<p>$1+\sqrt{3}i=2(cos(\frac{\pi}{3})+i\ sin(\frac{\pi}{3}))$ </p>
+<p>$-\sqrt{3}-i=2(cos(-\frac{5\pi}{6}) + i\ sin(-\frac{5\pi}{6}))$ </p>
+<p>$ans = 4(cos(-\frac{\pi}{2}) + i\ sin(-\frac{\pi}{2}))=-4i$</p>
+</blockquote>
+<h3 id="1-2-5-复数的乘方与开方"><a href="#1-2-5-复数的乘方与开方" class="headerlink" title="1.2.5 复数的乘方与开方"></a>1.2.5 复数的乘方与开方</h3><ul>
+<li>复数的乘方<script type="math/tex; mode=display">
+z^n=r^n(cos(n\theta) + i\ sin(n\theta))</script></li>
+<li>复数的开方<script type="math/tex; mode=display">
+假设 w = z^{\frac{1}{n}}, w = p(cos\phi + i\ sin\phi), z = r(cos\theta + i\ sin\theta), 则 w^n = z</script><script type="math/tex; mode=display">
+\left\{
+\begin{aligned}
+p^n=r \\
+n\phi=\theta+2k\pi
+\end{aligned}
+\right.</script>可以解出:<script type="math/tex; mode=display">
+w=r^{\frac{1}{n}}(cos(\frac{1}{n}(\theta + 2k\pi)) + i\ sin(\frac{1}{n}(\theta + 2k\pi))), \; (k=0, 1, 2, ..., n - 1)</script>所以, 方程$w^n=z$, 有n个复数根, 在复平面上, 可以形成一个正n边形, 它们到原点的距离都是$r^{\frac{1}{n}}$<br><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220624200256.png" alt=""></li>
+</ul>
+<h2 id="1-3-平面点集的一般概念"><a href="#1-3-平面点集的一般概念" class="headerlink" title="1.3 平面点集的一般概念"></a>1.3 平面点集的一般概念</h2><h3 id="1-3-1-开集与闭集"><a href="#1-3-1-开集与闭集" class="headerlink" title="1.3.1 开集与闭集"></a>1.3.1 开集与闭集</h3><p><strong>邻域</strong>: $|z-z_0|&lt;\delta$, <strong>去心邻域</strong>: $0&lt;|z-z_0|&lt;\delta$</p>
+<p>设G是一个平面点集:</p>
+<ol>
+<li>$z_0$为G中任意一点, 如果存在$z_0$的一个邻域, 该邻域所有点都属于G, 那么称$z_0$为<strong>内点</strong>. 如果G内每个点都是内点, 那么称G为<strong>开集</strong></li>
+<li>平面上不属于G的点的全体称为G的<strong>余集</strong>, 开集的余集叫做<strong>闭集</strong></li>
+<li>$z_0$的任一邻域内既有G的点, 又有G的余集的点, 则称$z_0$为G的<strong>边界点</strong>, 全体边界点称为<strong>边界</strong></li>
+<li>$z_0\in G$, 若在$z_0$的某一邻域内除$z_0$以外不含G的点, 则称$z_0$是G的一个孤立点. G的孤立点一定是G的边界点</li>
+<li>如果存在一个以点$z=0$为中心的圆盘包含G, 称G为<strong>有界集</strong>, 否则为<strong>无界集</strong></li>
+</ol>
+<h3 id="1-3-2-区域"><a href="#1-3-2-区域" class="headerlink" title="1.3.2 区域"></a>1.3.2 区域</h3><blockquote>
+<p>复变函数的理论建立在平面点集的理论基础上, 就像单变量实函数理论建立在直线点集理论基础上一样. 复变量的变化范围主要是指区域.</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625081906.png" alt="区域"><br>满足以下两个条件的平面点集D称为一个<strong>区域</strong>:</p>
+<ol>
+<li>D是一个开集</li>
+<li>D是连通的</li>
+</ol>
+<p>换言之, <em>区域就是连通开集</em></p>
+<p>区域与它的边界一起构成闭区域, 记作$\overline{D}$</p>
+<blockquote>
+<p>区域是开集, 闭区域是闭集, 除了全平面既是区域又是闭区域这一个特例之外, 区域和闭区域是两种不同的点集, 闭区域不是区域</p>
+</blockquote>
+<h3 id="1-3-3-平面曲线"><a href="#1-3-3-平面曲线" class="headerlink" title="1.3.3 平面曲线"></a>1.3.3 平面曲线</h3><p>用实变量的复值函数$z(t)$来表示平面曲线:</p>
+<script type="math/tex; mode=display">
+z(t) = x(t) + i\ y(t)</script><p>如果在区间$[a, b]$上, $x^\prime(t)$和$y^\prime(t)$都是连续的, 且对于t的每一个值有:</p>
+<script type="math/tex; mode=display">
+[x^\prime(t)]^2 + [y^\prime(t)]^2 \neq 0</script><p>那么这条曲线称为<strong>光滑</strong>的.</p>
+<p>设C: $z=z(t)\ (a\leq t \leq b)$是一条连续曲线, $z(a), z(b)$分别为C的起点和终点, 对于满足$a&lt;t_1&lt;b, a\leq t_2 \leq b$的$t1, t2$, 如果$t1 \neq t2$, 且$z(t_1)=z(t_2)$, 则点$z(t_1)$称为曲线C的<strong>重点</strong>. 没有重点的连续曲线C称为<strong>简单曲线</strong>或<strong>Jordan曲线</strong>. 如果简单曲线C的起点与终点重合, 即$z(a)=z(b)$, 那么称曲线C为<strong>简单闭曲线</strong>.<br><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625083301.png" alt=""></p>
+<p><strong>若尔当曲线定理</strong>: 任意简单闭曲线将平面分成两个区域. 都以曲线为边界, 一个是有界区域, 称为简单闭曲线的<strong>内部</strong>, 另一个是无界区域, 称为<strong>外部</strong>.</p>
+<p>设D是一个区域, 如果D内任一简单闭曲线内部总属于D, 则D是<strong>单连通区域</strong>, 否则是<strong>多连通区域</strong>.<br><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625084402.png" alt=""></p>
+<h2 id="1-4-无穷大与复球面"><a href="#1-4-无穷大与复球面" class="headerlink" title="1.4 无穷大与复球面"></a>1.4 无穷大与复球面</h2><h3 id="1-4-1-无穷远点"><a href="#1-4-1-无穷远点" class="headerlink" title="1.4.1 无穷远点"></a>1.4.1 无穷远点</h3><p>复平面上没有一点与$\infty$对应, 但是假设复平面上有一理想点与它对应, 称为<strong>无穷远点</strong>. 复平面加上无穷远点称为<strong>扩充复平面</strong>. 扩充复平面上的每一条直线都通过无穷远点. </p>
+<blockquote>
+<ul>
+<li>无穷远点的邻域: 包括无穷远点在内且满足$|z| &gt; M$的所有点的集合, 其中$M &gt; 0$</li>
+<li>无穷远点的去心邻域: 不包括无穷远点自身</li>
+</ul>
+</blockquote>
+<h3 id="1-4-2-复球面"><a href="#1-4-2-复球面" class="headerlink" title="1.4.2 复球面"></a>1.4.2 复球面</h3><p>建立球面上和复平面上的点的一一对应关系, 如下图: 连接N和Z, 就得到交点z<br><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625085332.png" alt="复球面"></p>
+<h2 id="1-5-复变函数"><a href="#1-5-复变函数" class="headerlink" title="1.5 复变函数"></a>1.5 复变函数</h2><h3 id="1-5-1-复变函数的概念"><a href="#1-5-1-复变函数的概念" class="headerlink" title="1.5.1 复变函数的概念"></a>1.5.1 复变函数的概念</h3><p>设D是复平面上的一点集. 如果D中任意一点z, 都有一个复数w与它对应, 则D上有一个复变函数$w=f(z)$. 一个z对应一个w是<strong>单值函数</strong>, 否则是<strong>多值函数</strong>, 我们一般说的是单值函数.</p>
+<p>设$z=x+iy$, 则$w=f(z)$可以写成下列形式:</p>
+<script type="math/tex; mode=display">
+w=f(z)=u + iv = u(x, y) + iv(x, y)</script><p>其中$u(x, y), v(x, y)$为实值函数. 分开实部虚部, 得到:</p>
+<script type="math/tex; mode=display">
+u = u(x, y), v = v(x, y)</script><blockquote>
+<p>例题1.13 将复变函数$w=z^2 + 1$化为一对二元实变函数</p>
+<p>令$z=x+iy, w=u+iv$, 代入得:<br>$u + iv = (x+iy)^2+1=x^2-y^2+1+2ixy$</p>
+<p>则: $u=x^2-y^2+1, v=2xy$</p>
+</blockquote>
+<h3 id="1-5-2-复变函数得极限与连续性"><a href="#1-5-2-复变函数得极限与连续性" class="headerlink" title="1.5.2 复变函数得极限与连续性"></a>1.5.2 复变函数得极限与连续性</h3><p>…跳过</p>
+<h1 id="第二章-解析函数"><a href="#第二章-解析函数" class="headerlink" title="第二章 解析函数"></a>第二章 解析函数</h1><h2 id="2-1-解析函数的概念"><a href="#2-1-解析函数的概念" class="headerlink" title="2.1 解析函数的概念"></a>2.1 解析函数的概念</h2><h3 id="2-1-1-复变函数的导数"><a href="#2-1-1-复变函数的导数" class="headerlink" title="2.1.1 复变函数的导数"></a>2.1.1 复变函数的导数</h3><p>和以前学的差不多</p>
+<h3 id="2-1-2-解析函数的概念与求导法则"><a href="#2-1-2-解析函数的概念与求导法则" class="headerlink" title="2.1.2 解析函数的概念与求导法则"></a>2.1.2 解析函数的概念与求导法则</h3><p>函数解析就是在一个区域上处处可导</p>
+<p>求导的运算法则和之前一样</p>
+<h3 id="2-1-3-函数解析的一个充分必要条件"><a href="#2-1-3-函数解析的一个充分必要条件" class="headerlink" title="2.1.3 函数解析的一个充分必要条件"></a>2.1.3 函数解析的一个充分必要条件</h3><ul>
+<li>定理 2.1: (这个定理说的是某一点可导)复变函数$f(z)=u(x, y) + iv(x, y)$在$z=x+iy$上可导的充要条件是: $u(x, y), v(x, y)$在点$(x, y)$处可微, 并且满足<strong>柯西-黎曼(Cauchy-Riemann)方程</strong>(简称C-R方程): <script type="math/tex; mode=display">
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\  \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}</script></li>
+<li>定理 2.2: (这个定理说的是区域可导)复变函数$f(z)=u(x, y) + iv(x, y)$在区域D内解析的充要条件: $u(x, y), v(x, y)$在D内处处可微, 且满足C-R方程</li>
+</ul>
+<h2 id="2-2-解析函数和调和函数的关系"><a href="#2-2-解析函数和调和函数的关系" class="headerlink" title="2.2 解析函数和调和函数的关系"></a>2.2 解析函数和调和函数的关系</h2><h3 id="2-2-1-调和函数的概念"><a href="#2-2-1-调和函数的概念" class="headerlink" title="2.2.1 调和函数的概念"></a>2.2.1 调和函数的概念</h3><p>若二元实函数$\phi(x, y)$在区域D内有二阶连续偏导数, 且满足二维拉普拉斯方程: </p>
+<script type="math/tex; mode=display">
+\frac{\partial^2\phi}{\partial x^2} + \frac{\partial ^2 \phi}{\partial y^2}=0</script><p>这样的函数就叫<strong>调和函数</strong></p>
+<ul>
+<li>定理 2.3: 设函数$f(z)=u(x, y) + iv(x, y)$在区域D内解析, 则$f(z)$的实部虚部都是区域D内的调和函数</li>
+</ul>
+<h3 id="2-2-2-共轭调和函数"><a href="#2-2-2-共轭调和函数" class="headerlink" title="2.2.2 共轭调和函数"></a>2.2.2 共轭调和函数</h3><p>设$\phi(x, y), \psi(x, y)$ 都是区域D内的调和函数, 且满足C-R方程, 则称$\psi$是$\phi$的<strong>共轭调和函数</strong></p>
+<ul>
+<li>定理 2.3: 复变函数$f(z)=u(x, y) + iv(x, y)$在区域D内解析的充要条件是在区域D内, 虚部$v(x, y)$是实部$u(x, y)$的共轭调和函数. </li>
+</ul>
+<h3 id="2-2-3-解析函数和调和函数的关系"><a href="#2-2-3-解析函数和调和函数的关系" class="headerlink" title="2.2.3 解析函数和调和函数的关系"></a>2.2.3 解析函数和调和函数的关系</h3><p>有一个调和函数, 用C-R方程求共轭调和函数, 就可以得到一个解析函数, 这种方法叫做偏积分法. </p>
+<blockquote>
+<p>例题: 验证$u(x, y) = x^3-3xy^2$是调和函数, 并求以$u(x, y)$为实部的解析函数$f(z)$, 使之满足$f(0) = i$</p>
+<p>因为$\frac{\partial^2u}{\partial x^2}=6x, \frac{\partial^2u}{\partial y^2}=-6x$, 二阶偏导存在且连续, 又满足二阶拉普拉斯方程, 所以$u(x, y)$是调和函数</p>
+<p>接下来用C-R方程求共轭调和函数: $v(x, y) = 3x^2y-y^3+C$, 又要满足z=0的情况, 得$C=1$, 则得到答案: </p>
+<script type="math/tex; mode=display">f(z)=x^3-3xy^2+i(3x^2y-y^3+1)=z^3+i</script></blockquote>
+<h2 id="2-3-初等函数"><a href="#2-3-初等函数" class="headerlink" title="2.3 初等函数"></a>2.3 初等函数</h2><h3 id="2-3-1-指数函数"><a href="#2-3-1-指数函数" class="headerlink" title="2.3.1 指数函数"></a>2.3.1 指数函数</h3><p>对于复数$z=x+iy$, 称$w=e^z=e^x(\cos y + i\ \sin y)$ 为指数函数</p>
+<p>指数函数的性质: </p>
+<ol>
+<li>$e^z\neq 0$</li>
+<li>$e^{z_1}e^{z_2}=e^{z_1+z_2}$</li>
+<li>$e^z=e^ze^{2k\pi i}=e^{z+2k\pi i}$</li>
+<li>当z趋向于$\infty$时, 没有极限</li>
+</ol>
+<h3 id="2-3-2-对数函数"><a href="#2-3-2-对数函数" class="headerlink" title="2.3.2 对数函数"></a>2.3.2 对数函数</h3><p>$w=\ln z$, 对一切不为0的复数z有定义</p>
+<p>对数函数的性质:</p>
+<ol>
+<li>运算性质: $\ln (z_1z_2)=\ln z_1 + \ln z_2, \  \ln \frac{z_1}{z_2}=\ln z_1 - \ln z_2$</li>
+<li>解析性质: $\frac{d(\ln z)}{dz}=\frac{1}{z}$</li>
+</ol>
+<h3 id="2-3-3-幂函数"><a href="#2-3-3-幂函数" class="headerlink" title="2.3.3 幂函数"></a>2.3.3 幂函数</h3><h3 id="2-3-4-三角函数"><a href="#2-3-4-三角函数" class="headerlink" title="2.3.4 三角函数"></a>2.3.4 三角函数</h3><p>用欧拉公式, 再用$-y$代替$y$</p>
+<script type="math/tex; mode=display">
+e^{iy}=\cos y + i \ \sin y,\  e^{-iy}=\cos y - i\ \sin y</script><p>可以解出:</p>
+<script type="math/tex; mode=display">
+\cos y=\frac{e^{iy} + e^{-iy}}{2}, \  \sin y=\frac{e^{iy}-e^{-iy}}{2i}</script><p>性质: 与实函数类似, 略过</p>
+<h3 id="2-3-5-反三角函数"><a href="#2-3-5-反三角函数" class="headerlink" title="2.3.5 反三角函数"></a>2.3.5 反三角函数</h3><h3 id="2-3-6-双曲函数与反双曲函数"><a href="#2-3-6-双曲函数与反双曲函数" class="headerlink" title="2.3.6 双曲函数与反双曲函数"></a>2.3.6 双曲函数与反双曲函数</h3><h1 id="第三章-复变函数的积分"><a href="#第三章-复变函数的积分" class="headerlink" title="第三章 复变函数的积分"></a>第三章 复变函数的积分</h1><h2 id="3-1-复积分的概念"><a href="#3-1-复积分的概念" class="headerlink" title="3.1 复积分的概念"></a>3.1 复积分的概念</h2><h3 id="3-1-1-复积分的定义与计算"><a href="#3-1-1-复积分的定义与计算" class="headerlink" title="3.1.1 复积分的定义与计算"></a>3.1.1 复积分的定义与计算</h3><p>略过数学定义.</p>
+<p>定理 3.1: 设$f(z)=u(x,y)+iv(x,y)$在光滑曲线C上连续, 则复积分$\int_Cf(z)dz$存在, 而且可以表示为:</p>
+<script type="math/tex; mode=display">
+\int_Cf(z)dz=\int_Cu(x,y)dx-v(x,y)dy+i\int_Cv(x,y)dx+u(x,y)dy</script><blockquote>
+<p>例题:<br><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625144750.png" alt="例题3.2"><br>注意: 结果与积分路径圆心和半径无关<br><img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220625145502.png" alt="例题3.3"><br>容易证明, 上面的复积分与路径C无关</p>
+</blockquote>
+<h3 id="3-1-2-复积分的基本性质"><a href="#3-1-2-复积分的基本性质" class="headerlink" title="3.1.2 复积分的基本性质"></a>3.1.2 复积分的基本性质</h3><p>复积分的实部虚部都是曲线积分, 所以曲线积分的大多数性质对复积分也成立</p>
+<h2 id="3-2-柯西积分定理"><a href="#3-2-柯西积分定理" class="headerlink" title="3.2 柯西积分定理"></a>3.2 柯西积分定理</h2><blockquote>
+<p>复积分有时和积分路线有关, 有时无关. 复变函数可以化为实函数线积分, 那么问题就转化为实函数线积分什么时候与路径无关. 参考微积分课程的格林公式部分<br><strong>柯西积分定理</strong>: 设函数$f(z)$在单连通区域D内解析, 则$f(z)$在D内沿任一条简单闭曲线C的积分为0</p>
+</blockquote>
+<ul>
+<li>定理 3.3: 函数$f(z)$在单连通区域D内解析, 则复积分和路线无关, 只与起点终点有关</li>
+<li>定理 3.4: 闭曲线$C_1$包含闭曲线$C_2$, 则$f(z)$在$C_1, C_2$围成的多连通区域D内解析<img src="https://raw.githubusercontent.com/zone-1614/pic/main/img/20220626161544.png" alt=""></li>
+<li>定理 3.5: 如果$f(z)$在D内解析,那么由变上限积分所确定的函数也是D内的解析函数<script type="math/tex">F(z)=\int_{z_0}^{z}f(w)dw</script>, 而且$F^\prime(z)=f(z)$, 且$F(z)$为$f(z)$的<strong>原函数</strong></li>
+<li>定理 3.6: 设$f(z)$在单连通区域D内解析, $G(z)$是其的一个原函数, 则<script type="math/tex">\int_{z_0}^{z_1}f(z)dz=G(z_1)-G(z_0)</script></li>
+</ul>
+<h2 id="3-3-柯西积分公式"><a href="#3-3-柯西积分公式" class="headerlink" title="3.3 柯西积分公式"></a>3.3 柯西积分公式</h2><p>柯西积分公式: (条件: $f(z)$在D内解析, 在$\overline{D}=D\cup C$上连续)</p>
+<script type="math/tex; mode=display">
+f(z_0)=\frac{1}{2\pi i}\oint_{C}\frac{f(z)}{z-z_0}dz</script><ul>
+<li>推论(平均值公式): 设$f(z)$在$|z-z_0|&lt;R$内解析, 在$|z-z_0|\leq R$上连续, 则<script type="math/tex; mode=display">
+f(z_0)=\frac{1}{2\pi}\int_0^{2\pi}f(z_0 + Re^{i\theta})d\theta</script></li>
+<li>定理 3.8(最大模原理): 一个解析函数的模, 在区域内部的任一点都达不到最大值, 除非这个函数是一个常数</li>
+</ul>
+<h2 id="3-4-解析函数的高阶导数"><a href="#3-4-解析函数的高阶导数" class="headerlink" title="3.4 解析函数的高阶导数"></a>3.4 解析函数的高阶导数</h2><p>在是函数中一阶导存在不能保证高阶导存在, 而复变函数只要可导, 它的任意阶导数都存在, 且满足: </p>
+<script type="math/tex; mode=display">
+f^{(n)}=\frac{n!}{2\pi i}\oint_C\frac{\zeta}{(\zeta - z)^{n+1}}d\zeta \ (n=1,2,...)</script><ul>
+<li>柯西不等式: 设函数$f(z)$在$|z-z_0|&lt;R$内解析, 又$|f(z)| \leq M$, 则: <script type="math/tex; mode=display">
+|f^{(n)}(z_0)|\leq \frac{n!M}{R^n}\ (n=1,2,...)</script></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/06/21/linux%E4%B8%8Bxmake%E6%9E%84%E5%BB%BAopengl%E9%A1%B9%E7%9B%AE/" rel="prev" title="linux下xmake构建opengl项目">
+      <i class="fa fa-chevron-left"></i> linux下xmake构建opengl项目
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">第一章 复数与复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%A4%8D%E6%95%B0"><span class="nav-text">1.1 复数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1.1.1 复数的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E5%A4%8D%E6%95%B0%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97"><span class="nav-text">1.1.2 复数的四则运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-%E5%A4%8D%E5%B9%B3%E9%9D%A2"><span class="nav-text">1.1.3 复平面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%89%E8%A7%92%E8%A1%A8%E7%A4%BA"><span class="nav-text">1.2 复数的三角表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E5%A4%8D%E6%95%B0%E7%9A%84%E6%A8%A1%E4%B8%8E%E8%BE%90%E8%A7%92"><span class="nav-text">1.2.1 复数的模与辐角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E5%A4%8D%E6%95%B0%E6%A8%A1%E7%9A%84%E4%B8%89%E8%A7%92%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-text">1.2.2 复数模的三角不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B8%89%E8%A7%92%E8%A1%A8%E7%A4%BA"><span class="nav-text">1.2.3 复数的三角表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-4-%E5%A4%8D%E6%95%B0%E4%B8%89%E8%A7%92%E8%A1%A8%E7%A4%BA%E7%9A%84%E4%B9%98%E9%99%A4%E6%B3%95"><span class="nav-text">1.2.4 复数三角表示的乘除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-5-%E5%A4%8D%E6%95%B0%E7%9A%84%E4%B9%98%E6%96%B9%E4%B8%8E%E5%BC%80%E6%96%B9"><span class="nav-text">1.2.5 复数的乘方与开方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E5%B9%B3%E9%9D%A2%E7%82%B9%E9%9B%86%E7%9A%84%E4%B8%80%E8%88%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1.3 平面点集的一般概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-%E5%BC%80%E9%9B%86%E4%B8%8E%E9%97%AD%E9%9B%86"><span class="nav-text">1.3.1 开集与闭集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-%E5%8C%BA%E5%9F%9F"><span class="nav-text">1.3.2 区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-3-%E5%B9%B3%E9%9D%A2%E6%9B%B2%E7%BA%BF"><span class="nav-text">1.3.3 平面曲线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E6%97%A0%E7%A9%B7%E5%A4%A7%E4%B8%8E%E5%A4%8D%E7%90%83%E9%9D%A2"><span class="nav-text">1.4 无穷大与复球面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-%E6%97%A0%E7%A9%B7%E8%BF%9C%E7%82%B9"><span class="nav-text">1.4.1 无穷远点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-%E5%A4%8D%E7%90%83%E9%9D%A2"><span class="nav-text">1.4.2 复球面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">1.5 复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1.5.1 复变函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E5%BE%97%E6%9E%81%E9%99%90%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="nav-text">1.5.2 复变函数得极限与连续性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-text">第二章 解析函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 解析函数的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0"><span class="nav-text">2.1.1 复变函数的导数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99"><span class="nav-text">2.1.2 解析函数的概念与求导法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%85%E5%88%86%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-text">2.1.3 函数解析的一个充分必要条件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E5%92%8C%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">2.2 解析函数和调和函数的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">2.2.1 调和函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-%E5%85%B1%E8%BD%AD%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">2.2.2 共轭调和函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E5%92%8C%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">2.2.3 解析函数和调和函数的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-text">2.3 初等函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0"><span class="nav-text">2.3.1 指数函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0"><span class="nav-text">2.3.2 对数函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-%E5%B9%82%E5%87%BD%E6%95%B0"><span class="nav-text">2.3.3 幂函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="nav-text">2.3.4 三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-5-%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="nav-text">2.3.5 反三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-6-%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0%E4%B8%8E%E5%8F%8D%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0"><span class="nav-text">2.3.6 双曲函数与反双曲函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-text">第三章 复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%A4%8D%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">3.1 复积分的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E5%A4%8D%E7%A7%AF%E5%88%86%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E8%AE%A1%E7%AE%97"><span class="nav-text">3.1.1 复积分的定义与计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E5%A4%8D%E7%A7%AF%E5%88%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="nav-text">3.1.2 复积分的基本性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86"><span class="nav-text">3.2 柯西积分定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-text">3.3 柯西积分公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="nav-text">3.4 解析函数的高阶导数</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zone-1614</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zone-1614</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
